@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="callnewtrainformpane" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminPanel.AddedTrainListController">
+   <children>
+      <TableView fx:id="trainlisttable" layoutY="38.0" prefHeight="361.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="39.0">
+        <columns>
+            <TableColumn fx:id="columntrainid" prefWidth="75.0" text="ID" visible="false" />
+          <TableColumn fx:id="addedtrainid" prefWidth="75.0" text="Train ID" />
+          <TableColumn fx:id="trainname" prefWidth="75.0" text="Train Name" />
+            <TableColumn fx:id="trainfrom" prefWidth="75.0" text="From" />
+            <TableColumn fx:id="trainto" prefWidth="75.0" text="To" />
+            <TableColumn fx:id="traintime" prefWidth="75.0" text="Time" />
+            <TableColumn fx:id="trainprice" prefWidth="75.0" text="Cost" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TextField fx:id="searchtrainid" layoutX="203.0" prefHeight="36.0" prefWidth="166.0" promptText="Search By Train ID" AnchorPane.bottomAnchor="364.0" AnchorPane.leftAnchor="203.0" AnchorPane.rightAnchor="431.0" AnchorPane.topAnchor="3.0" />
+      <JFXButton layoutX="382.0" layoutY="5.0" onAction="#deletetrain" prefHeight="34.0" prefWidth="192.0" stylesheets="@buttonColor.css" text="Delete" AnchorPane.bottomAnchor="363.0" AnchorPane.leftAnchor="382.0" AnchorPane.rightAnchor="335.0" AnchorPane.topAnchor="3.0" />
+      <Label layoutX="681.0" layoutY="14.0" prefHeight="34.0" prefWidth="74.0" text="Total Train" AnchorPane.bottomAnchor="363.0" AnchorPane.leftAnchor="681.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="3.0" />
+      <Label fx:id="label" layoutX="709.0" layoutY="6.0" prefHeight="34.0" prefWidth="41.0" AnchorPane.bottomAnchor="363.0" AnchorPane.leftAnchor="755.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="3.0" />
+      <JFXTextField fx:id="txt_newtrainid" layoutX="488.0" layoutY="7.0" prefHeight="24.0" prefWidth="16.0" visible="false" />
+      <JFXButton layoutX="73.0" layoutY="2.0" onAction="#addnewtrain" prefHeight="34.0" prefWidth="123.0" stylesheets="@buttonColor.css" text="Add New Train" AnchorPane.bottomAnchor="364.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="604.0" AnchorPane.topAnchor="2.0" />
+      <ImageView fitHeight="34.0" fitWidth="41.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="365.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="754.0" AnchorPane.topAnchor="1.0">
+         <image>
+            <Image url="@images/back.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="7.0" layoutY="3.0" onAction="#callhomefromtrainlist" prefHeight="34.0" prefWidth="41.0" stylesheets="@buttonColor.css" text=" " AnchorPane.bottomAnchor="365.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="754.0" AnchorPane.topAnchor="1.0" />
+   </children>
+</AnchorPane>

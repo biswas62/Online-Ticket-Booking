@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="callnewbusformpane" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminPanel.AddedBusListController">
+   <children>
+      <TableView fx:id="buslisttable" layoutY="38.0" prefHeight="361.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="39.0">
+        <columns>
+            <TableColumn fx:id="columnid" prefWidth="75.0" text="ID" visible="false" />
+          <TableColumn fx:id="addedbusid" prefWidth="75.0" text="Bus ID" />
+          <TableColumn fx:id="busname" prefWidth="75.0" text="Bus Name" />
+            <TableColumn fx:id="busfrom" prefWidth="75.0" text="From" />
+            <TableColumn fx:id="busto" prefWidth="75.0" text="To" />
+            <TableColumn fx:id="bustime" prefWidth="75.0" text="Time" />
+            <TableColumn fx:id="busprice" prefWidth="75.0" text="Cost" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TextField fx:id="searchbusid" layoutX="203.0" prefHeight="36.0" prefWidth="166.0" promptText="Search By Bus ID" AnchorPane.bottomAnchor="364.0" AnchorPane.leftAnchor="203.0" AnchorPane.rightAnchor="431.0" AnchorPane.topAnchor="3.0" />
+      <JFXButton layoutX="382.0" layoutY="5.0" onAction="#deletebus" prefHeight="34.0" prefWidth="192.0" stylesheets="@buttonColor.css" text="Delete" AnchorPane.bottomAnchor="363.0" AnchorPane.leftAnchor="382.0" AnchorPane.rightAnchor="335.0" AnchorPane.topAnchor="3.0" />
+      <Label layoutX="689.0" layoutY="14.0" prefHeight="34.0" prefWidth="66.0" text="Total Bus" AnchorPane.bottomAnchor="363.0" AnchorPane.leftAnchor="689.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="3.0" />
+      <Label fx:id="label" layoutX="709.0" layoutY="6.0" prefHeight="34.0" prefWidth="41.0" AnchorPane.bottomAnchor="363.0" AnchorPane.leftAnchor="755.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="3.0" />
+      <JFXTextField fx:id="txt_newbusid" layoutX="488.0" layoutY="7.0" prefHeight="24.0" prefWidth="16.0" visible="false" />
+      <JFXButton layoutX="73.0" layoutY="2.0" onAction="#addnewbus" prefHeight="32.0" prefWidth="118.0" stylesheets="@buttonColor.css" text="Add New Bus" AnchorPane.bottomAnchor="364.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="609.0" AnchorPane.topAnchor="2.0" />
+      <ImageView fitHeight="34.0" fitWidth="41.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="365.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="754.0" AnchorPane.topAnchor="1.0">
+         <image>
+            <Image url="@images/back.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="7.0" layoutY="3.0" onAction="#callhomefrombuslist" prefHeight="34.0" prefWidth="41.0" stylesheets="@buttonColor.css" text=" " AnchorPane.bottomAnchor="365.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="754.0" AnchorPane.topAnchor="1.0" />
+   </children>
+</AnchorPane>
